@@ -1,0 +1,13 @@
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    More <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+    <li data-ng-repeat="item in menu" ui-route="/{{item.link}}" data-ng-class="{active: $uiRoute}">
+        <a href="/{{item.link}}">{{item.title|translate}}</a>
+    </li>
+    <li>
+        <a href="#" data-ng-click="openScannerModal()">
+            <span class="glyphicon glyphicon-qrcode"></span> Scan
+        </a>
+    </li>
+</ul>

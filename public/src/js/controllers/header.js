@@ -3,6 +3,8 @@
 angular.module('insight.system').controller('HeaderController',
   function($scope, $rootScope, $modal, getSocket, Global, Block) {
     $scope.global = Global;
+    $scope.linker = "Master";
+    $scope.magy = "MAgic";
 
     $rootScope.currency = {
       factor: 1,

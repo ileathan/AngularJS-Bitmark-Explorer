@@ -1,3 +1,25 @@
+#linker {
+    font-family: Ubuntu, sans-serif;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    width: 60;
+}
+.mini-form-group {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: Ubuntu, sans-serif;
+    font-size: 14px;
+    height: 34px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    width: 60px;
+    margin-top: 15px;
+}
 @charset "UTF-8";/*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.

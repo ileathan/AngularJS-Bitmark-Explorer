@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 angular.module('insight.transactions').controller('transactionsController',
 function($scope, $rootScope, $routeParams, $location, Global, Transaction, TransactionsByBlock, TransactionsByAddress) {

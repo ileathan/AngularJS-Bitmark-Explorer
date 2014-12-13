@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('insight.blocks').controller('BlocksController',
-  function($scope, $rootScope, $routeParams, $location, Global, Block, Blocks, BlockByHeight) {
+angular.module('insight.blocks').controller('BlocksController', function($scope, $rootScope, $routeParams, $location, Global, Block, Blocks, BlockByHeight) {
   $scope.global = Global;
   $scope.loading = false;
 
@@ -81,6 +80,7 @@ angular.module('insight.blocks').controller('BlocksController',
       $rootScope.flashMessage = null;
       $scope.loading = false;
       $scope.block = block;
+      $rootScope.linker = "HOkay";
     }, function(e) {
       if (e.status === 400) {
         $rootScope.flashMessage = 'Invalid Transaction ID: ' + $routeParams.txId;
