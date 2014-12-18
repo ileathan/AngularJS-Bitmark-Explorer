@@ -32,17 +32,27 @@
       </a>
     </div>
   </div> -->
-  <h2>Block <span id="syncer" class="semi-bold">#{{block.height}}</span></h2>
+   <!-- <h2></h2> The old 'Block #4520' header was here -->
+  <br>
   <div class="text-muted" data-ng-if="!block.hash">
     <span translate>Loading Block Information</span>  <span class="loader-gif"></span>
   </div>
   <div data-ng-if="block.hash">
     <div class="well well-sm ellipsis">
-      <strong>BlockHash</strong> 
-      <span class="txid text-muted">{{block.hash}}</span>
-      <span class="btn-copy" clip-copy="block.hash"></span>
+      <a class="btn-expand" href="#" title="Show/Hide transactions" data-ng-click="emitMe()">
+        <span class="glyphicon glyphicon-plus-sign" data-ng-class="{'glyphicon-minus-sign': transOpened}"></span>
+      </a>
+      <strong>Block </strong><span id="syncer" class="semi-bold">#{{block.height}}</span>
+      <span  style="float: right;">
+        <strong>BlockHash</strong>
+        <span class="txid text-muted">{{block.hash}}</span>
+        <span class="btn-copy" clip-copy="block.hash"></span>
+      </span>
+      <!--<span style="text-align: right;">-->
+
     </div>
-    <h3 translate>Summary</h3>
+
+    <!-- <h3 translate>Summary</h3> -->
     <div class="row">
       <div class="col-md-6">
         <table class="table" style="table-layout: fixed">
@@ -90,7 +100,7 @@
           <tr ng-if="block.height>720" data-ng-show="block.previousblockhash">
             <td><strong translate>
               Previous Difficulty Change</strong></td>
-              <td ng-if="(block.height%720) != 0" class="text-right"><a href="/block-index/{{block.height-(block.height%720)}}">{{block.height-(block.height%720)}}</a></td>
+              <td ng-if="(block.height%720) != 0" class="text-right"><a href="/block-index/{{block.height-(block.height%720)}}">{{ block.height-(block.height%720)-1 }}</a></td>
               <td ng-if="(block.height%720) == 0" class="text-right"><a href="/block-index/{{( block.height-(block.height%720) - 720 )}}">{{( block.height-(block.height%720) - 720 )}}</a></td>
           </tr>
 
@@ -129,18 +139,20 @@
             <td><strong translate>Next Difficulty Change</strong></td>
             <td class="text-right"><a href="/block-index/{{720+(block.height-(block.height%720))}}">{{720+(block.height-(block.height%720))}}</a></td>
           </tr>
-                                            
-
           </tbody>
         </table>
       </div>
     </div>
   </div>
   <div data-ng-if="block.hash" data-ng-controller="transactionsController" data-ng-init="load('block')">
-    <h3 translate>Transactions</h3>
-    <div data-ng-include src="'/views/transaction/list.html'" when-scrolled="loadMore()"></div>
+    <!--
+    <a class="btn-expand" href="#" title="Show/Hide items details" data-ng-click="itemsExpanded = !itemsExpanded">
+      <span class="glyphicon glyphicon-plus-sign" data-ng-class="{'glyphicon-minus-sign': itemsExpanded}"></span>
+    </a>
+    -->
+    <!-- <h3 translate>Transactions</h3> -->
+    <div data-ng-hide="Trans" data-ng-include src="'/views/transaction/list.html'" when-scrolled="loadMore()"></div>
   </div>
-
 
 </section>
 
