@@ -28,7 +28,7 @@ Check some screenshots and more details at [insight's project homepage](http://i
 
   Install dependencies:
     
-    $ cd AngularJS-Bitmark-Explorer.git
+    $ cd AngularJS-Bitmark-Explorer
     $ npm install
     
   Run the main application:
