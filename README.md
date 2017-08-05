@@ -1,7 +1,7 @@
 AngularJS-Bitmark-Explorer
 ==========================
 
-This is a fork of Insights blockchain explorer with added functionality customized to the bitmark network.
+This is a fork of Insights blockchain explorer with added GUI components and extra functionality customized to the bitmark network.
 
 # *insight*
 
