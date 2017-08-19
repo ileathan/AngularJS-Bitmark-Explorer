@@ -29,7 +29,7 @@ Check some screenshots and more details at [insight's project homepage](http://i
   Install dependencies:
     
     $ cd AngularJS-Bitmark-Explorer
-    $ npm install
+    $ npm install # If you have error here make sure your using node 0.10.x
     
   Run the main application:
     
@@ -51,6 +51,15 @@ Check some screenshots and more details at [insight's project homepage](http://i
   sync progress from within the web interface. More details about that process
   on [insight-api README](https://github.com/bitpay/insight-api/blob/master/README.md). 
   
+  
+## Troubleshooting
+
+  If you get an error during the npm isntall process try visiting http://nvm.sh then after you install nvm get node version 0.10.x
+
+    $ nvm install 0.10
+
+  Then try `npm install` again. to switch back to your old node version `nvm list` and `nvm use` commands let you do so.
+
   
 ## Nginx Setup
 
